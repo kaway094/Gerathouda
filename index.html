@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Houda Player Link Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Houda Player Link Generator</h1>
+    <form id="linkForm">
+      <label for="videoUrl">📺 Video URL:</label>
+      <input type="url" id="videoUrl" placeholder="Enter video URL (http/https)" required />
+
+      <label for="serverName">🌐 Server Name (optional):</label>
+      <input type="text" id="serverName" placeholder="Example: HD Server" />
+
+      <label for="userAgent">🧾 User-Agent (optional):</label>
+      <input type="text" id="userAgent" placeholder="Custom User-Agent"/>
+
+      <label for="referer">🔗 Referer (optional):</label>
+      <input type="text" id="referer" placeholder="https://referer.com"/>
+
+      <label for="logo">🏷️ App Logo URL (optional):</label>
+      <input type="url" id="logo" placeholder="https://example.com/logo.png"/>
+
+      <button type="submit">Generate Link</button>
+    </form>
+
+    <div id="result" class="hidden">
+      <h2>🎉 Generated Intent Link:</h2>
+      <textarea id="generatedLink" readonly></textarea>
+      <button onclick="copyLink()">📋 Copy to Clipboard</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
